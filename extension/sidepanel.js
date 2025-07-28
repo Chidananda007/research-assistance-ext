@@ -107,10 +107,7 @@ async function handleProcess() {
 
         } catch (fetchError) {
             if (fetchError.message.includes('Failed to fetch')) {
-                showResult('Error: Cannot connect to the backend server. Please ensure that:<br>' +
-                    '1. The backend server is running on port 8050<br>' +
-                    '2. You have set the GEMINI_API_KEY environment variable<br>' +
-                    '3. Check the browser console for more details');
+                showResult('Error: Cannot connect to the backend server is not active:<br>');
                 console.error('Connection error:', fetchError);
             } else {
                 showResult('Error: ' + fetchError.message);
