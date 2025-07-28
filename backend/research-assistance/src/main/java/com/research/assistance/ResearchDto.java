@@ -13,14 +13,9 @@ public record ResearchDto() {
   public enum OperationType {
     SUMMARIZE,
     EXPLAIN,
-    COMPARE,
-    CONTRAST,
     ANALYZE,
     EVALUATE,
-    SYNTHESIZE,
-    DESCRIBE,
-    INTERPRET,
-    CRITIQUE
+    SEARCH
   }
 
   @Builder

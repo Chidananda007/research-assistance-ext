@@ -72,10 +72,21 @@ public class ResearchService {
     switch (request.operationType()) {
       case SUMMARIZE ->
           promptBuilder.append(
-              "Provide a clear and concise summary of the following content in a few sentence: \n\n");
+              "Provide a clear and concise summary of the following content in a few sentences: \n\n");
       case EXPLAIN ->
           promptBuilder.append(
-              "Based on the following content: suggest related topics and further reading.Format the reponse with clear headings and bulleted points:\n\n");
+              "Based on the following content: suggest related topics and further reading. Format the response with clear headings and bulleted points:\n\n");
+      case ANALYZE ->
+          promptBuilder.append(
+              "Provide a detailed analysis of the following content, breaking down its key components and examining their relationships: \n\n");
+      case EVALUATE ->
+          promptBuilder.append(
+              "Critically evaluate the following content, assessing its strengths, weaknesses, and overall effectiveness: \n\n");
+      case SEARCH ->
+          promptBuilder.append(
+              "For the given term, provide:\n1. Definition: A clear and comprehensive definition\n" +
+              "2. Examples: At least 2 practical examples of usage or application\n" +
+              "3. Related Concepts: Key related terms or concepts\n\nTerm to search: ");
       default ->
           throw new IllegalArgumentException(
               "Unsupported operation type: " + request.operationType());
