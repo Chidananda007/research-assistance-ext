@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: research-assistance
+
+server:
+  port: 8050
+  servlet:
+    context-path: /api
+
+app:
+  gemini:
+    api:
+      key: ${GEMINI_API_KEY:}
+      url: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=
