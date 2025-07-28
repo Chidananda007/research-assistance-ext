@@ -9,32 +9,33 @@
 <body>
     <div class="container">
         <div class="header">
+            <h1 class="title">Research Assistant</h1>
             <a href="#" id="aboutLink" class="about-link">About</a>
         </div>
 
         <div id="aboutContent" class="about-content hidden">
-            <h3>About Research Assistant</h3>
-            <p>Research Assistant is a powerful browser extension designed to enhance your research and learning experience. It helps you:</p>
+            <div class="about-header">
+                <h3>About</h3>
+                <button class="close-about">&times;</button>
+            </div>
+            <p>Research Assistant enhances your browsing and research experience:</p>
             <ul>
-                <li>Summarize complex text with a single click</li>
-                <li>Get detailed explanations of selected content</li>
-                <li>Save and organize your research notes</li>
-                <li>Process information from any webpage efficiently</li>
+                <li>Select any text on webpage to analyze it</li>
+                <li>Write or paste text in the notes area for processing</li>
+                <li>Choose between Summarize and Explain operations</li>
+                <li>Notes are automatically saved for future reference</li>
             </ul>
-            <p>Perfect for students, researchers, and professionals who want to streamline their research process.</p>
-            <button class="close-about">Close</button>
+            <p class="tip">💡 Tip: Select text on any webpage and use the extension to get instant insights!</p>
         </div>
 
         <div class="separator"></div>
 
         <div class="notes">
-            <h3>Research Notes</h3>
-            <textarea id="notes" placeholder="Take notes here..."></textarea>
+            <textarea id="notes" placeholder="Type or paste text here to analyze..."></textarea>
 
             <div class="operation-selector">
                 <select id="operationSelect">
-                    <option value="">Select Operation</option>
-                    <option value="SUMMARIZE">Summarize</option>
+                    <option value="SUMMARIZE" selected>Summarize</option>
                     <option value="EXPLAIN">Explain</option>
                 </select>
                 <button id="processBtn">Search</button>
